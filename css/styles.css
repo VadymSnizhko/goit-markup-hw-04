@@ -38,7 +38,7 @@ img{
 /* #region header */
 .header{
     background-color: #FFFFFF;
-    border-bottom: 1px solid #E7E9FC;*/
+    border-bottom: 1px solid #E7E9FC;
 }
 
 .head-flex{
@@ -137,6 +137,12 @@ ol{
     /* ---HW3---*/
     padding-top: 188px;
     padding-bottom: 188px;
+    /*-- HW4 --*/
+    background-image:
+        linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url("../images/people-office.jpg");
 }
 
 .hero-title{
