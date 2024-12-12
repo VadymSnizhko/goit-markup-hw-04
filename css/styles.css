@@ -39,6 +39,7 @@ img{
 .header{
     background-color: #FFFFFF;
     border-bottom: 1px solid #E7E9FC;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .head-flex{
@@ -102,7 +103,9 @@ ol{
 .item-link{
     display: block; /* For display LINK on full height */
     padding-top: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-ul .item-link{
@@ -125,26 +128,30 @@ ol{
 }
 
 .item-link:hover,
-.item-link:focus {
+.item-link:focus,
+.item-link.current {
     color: #404BBF;
 }
 
-.header-ul .item-list:first-child::after{
-    content: "";
-    border-radius: 2px;
-    width: 48px;
-    height: 4px;
-    background-color: #404bbf;
-    display: block;
+.item-link.current{
+    position: relative;
 }
 
-.header-ul .item-list::after {
+.item-link.current::after{
     content: "";
-    border-radius: 2px;
-    width: 48px;
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
     height: 4px;
-    display: block;
+
+    border-radius: 2px;
+
+    background-color: #404bbf;
 }
+
 /* #endregion */
 
 /* #region hero*/
@@ -292,6 +299,12 @@ ol{
 
 .team-person{
     padding: 32px 0;
+    /*-- HW4 --*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .team-name{
@@ -301,7 +314,7 @@ ol{
     letter-spacing: 0.02em;
     text-align: center;
     color: #2E2F42;
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
 }
 
 .team-special{
@@ -309,7 +322,41 @@ ol{
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
+    /*margin-bottom: 8px;*/
 }
+
+
+.team-social-links {
+    display: flex;
+    gap: 24px;
+    flex-shrink: 0;
+    align-self: center;
+    justify-content: center;
+  }
+  
+  .team-social-links .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  
+  .team-social-links .social-link:hover {
+    background-color: #404bbf;
+  }
+  
+  .team-social-links .social-icon {
+    fill: #F4F4FD;
+  }
+
+
+
 
 .portfolio{
     text-transform: capitalize;
