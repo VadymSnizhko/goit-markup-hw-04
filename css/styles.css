@@ -235,13 +235,11 @@ ol{
     margin-bottom: 8px;
   }
 
-.container.vision-class{
+
+.vision{
     display: flex;
     align-items: center; 
     justify-content: center; 
-}
-
-.vision{
     padding: 120px 0;
 }
 
