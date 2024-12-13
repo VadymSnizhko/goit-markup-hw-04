@@ -157,6 +157,8 @@ ol{
 /* #region hero*/
 .hero{
     background-color: #2E2F42;
+    background-position: center;
+    background-size: cover;
     /* ---HW3---*/
     padding-top: 188px;
     padding-bottom: 188px;
@@ -209,6 +211,8 @@ ol{
     padding-left: 0;
     padding-right: 0;
     border: 0;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -346,7 +350,8 @@ ol{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .team-person .team-social-links .social-link:hover {
+  .team-person .team-social-links .social-link:hover,
+  .team-person .team-social-links .social-link:focus {
     background-color: #404bbf;
   }
   
@@ -386,6 +391,10 @@ ol{
     transform: translateY(0);    
 }
 
+.portfolio-li{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-li:hover{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -397,6 +406,10 @@ ol{
     padding: 40px 32px;
     height: 100%;
     width: 100%;
+    
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 
     color: #f4f4fd;
     background-color: #4d5ae5;
@@ -441,6 +454,10 @@ ol{
     padding: 100px 0;
 }
 
+.footer-logo-main{
+    margin-right: 120px;
+}
+
 .footer-text{
     font-size: 16px;
     line-height: 1.5;
@@ -468,18 +485,16 @@ ol{
 .social-media .team-social-links{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline,;
 }
 
-.social-media {
-    margin-left: 120px;
-}
 
 .team-social-links{
     gap: 16px;
 }
 
-.social-media .team-social-links .social-link:hover {
+.social-media .team-social-links .social-link:hover,
+.social-media .team-social-links .social-link:focus {
     background-color: #31d0aa;
 }
 /* #endregion */
