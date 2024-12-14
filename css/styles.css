@@ -499,7 +499,7 @@ ol{
 .social-media .team-social-links{
     display: flex;
     justify-content: space-between;
-    align-items: baseline,;
+    align-items: baseline;
 }
 
 
@@ -510,5 +510,52 @@ ol{
 .social-media .team-social-links .social-link:hover,
 .social-media .team-social-links .social-link:focus {
     background-color: #31d0aa;
+}
+
+.open-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.input{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+
+    margin-top: 16px;
+    background-color: transparent;
+    border-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color: #FFFFFF;
+}
+
+.lab-inpt .label{
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    color: #FFFFFF;
+    margin-left: 80px;
+}
+
+.btn-sub{
+    color: #FFFFFF;
+    background-color: #4d5ae5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    border: 0;
+    border-radius: 4px;
+    margin-left: 24px;
+    max-width: 264px;
+}
+
+.icon-send{
+    fill: #FFFFFF;
 }
 /* #endregion */
