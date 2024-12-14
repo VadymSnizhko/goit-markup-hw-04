@@ -101,6 +101,7 @@ ol{
 }
 
 .item-link{
+    position: relative;
     display: block; /* For display LINK on full height */
     padding-top: 24px;
     padding-bottom: 24px;
@@ -132,12 +133,12 @@ ol{
 .item-link.current {
     color: #404BBF;
 }
-
+/*
 .item-link.current{
     position: relative;
-}
+}*/
 
-.item-link.current::after{
+.item-link::after{
     content: "";
 
     position: absolute;
@@ -150,6 +151,16 @@ ol{
     border-radius: 2px;
 
     background-color: #404bbf;
+
+    opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-link:hover::after,
+.item-link:focus::after,
+.item-link.current::after{
+    opacity: 1;
 }
 
 /* #endregion */
